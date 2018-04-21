@@ -17,4 +17,5 @@ class Cart(models.Model):
 class Product(models.Model):
 	price = models.IntegerField()
 	name = models.CharField(max_length=250)
+	description = models.CharField(max_length=250)
 	cart = models.ForeignKey('Cart', on_delete=models.CASCADE)
